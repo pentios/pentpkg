@@ -63,6 +63,8 @@ def install(force, *packages):
                         if val[1] != kernel:
                             print("package uses a different kernel!")
                             break
+                shutil.copyfile(tmp+str(p[0])+"/PKGINFO", package_list_dir+str(p[0])+".info")
+                shutil.copyfile(tmp+str(p[0])+"/DEPS", package_list_dir+str(p[0])+".deps")
                 #install dependencies
                 for d in deps:
                     install(str(d))
