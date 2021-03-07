@@ -1,0 +1,6 @@
+name pft
+arch x86_64
+desc a simple, light fetch written in Python.
+author Mason Meirs
+version 1.0
+kernel Linux
